@@ -1,0 +1,19 @@
+[package]
+name = "bin"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sdk = { path = "../sdk" }
+
+dotenvy = "0.15.7"
+tracing-subscriber = { version = "0.3.18", features = [
+    "env-filter",
+    "fmt",
+    "time",
+] }
+time = { version = "0.3.36", features = ["local-offset"] }
+anyhow = "1.0.86"
+clap = { version = "4.5.4", features = ["derive", "env"] }
+tracing = "0.1.27"
+tokio = { version = "1.16.1", features = ["full"] }
